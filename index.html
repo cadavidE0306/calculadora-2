@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Laboral</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Calculadora Laboral</h2>
+        <form>
+            <div class="section">
+                <label for="causa">Causa de liquidación</label>
+                <input type="text" id="causa" placeholder="Ej: Retiro voluntario" required>
+
+                <div class="radio-group">
+                    <label>Periodo de prueba</label>
+                    <label><input type="radio" name="periodo_prueba" value="si"> Si</label>
+                    <label><input type="radio" name="periodo_prueba" value="no"> No</label>
+                </div>
+
+                <div class="radio-group">
+                    <label>Indemnización por despido</label>
+                    <label><input type="radio" name="indemnizacion" value="si"> Si</label>
+                    <label><input type="radio" name="indemnizacion" value="no"> No</label>
+                </div>
+
+                <div class="radio-group">
+                    <label>Tipo de contrato</label>
+                    <label><input type="radio" name="tipo_contrato" value="indefinido" checked> Indefinido</label>
+                    <label><input type="radio" name="tipo_contrato" value="fijo"> Fijo</label>
+                </div>
+
+                <div class="radio-group">
+                    <label>Salario Integral</label>
+                    <label><input type="radio" name="salario_integral" value="si"> Si</label>
+                    <label><input type="radio" name="salario_integral" value="no"> No</label>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>Periodo de Liquidación</h3>
+                <label for="fecha_contratacion">Fecha de contratación</label>
+                <input type="date" id="fecha_contratacion" required>
+
+                <label for="fecha_liquidacion">Fecha de liquidación</label>
+                <input type="date" id="fecha_liquidacion" required>
+
+                <label for="dias_liquidar">Días a liquidar</label>
+                <input type="number" id="dias_liquidar" required>
+
+                <label for="vacaciones_pendientes">Días de vacaciones pendientes de pago</label>
+                <input type="number" id="vacaciones_pendientes" value="0">
+            </div>
+
+            <div class="section">
+                <h3>Salario Base de Liquidación</h3>
+                <label for="salario_base">Salario Base</label>
+                <input type="number" id="salario_base" required>
+
+                <label for="otros_ingresos">Otros ingresos mensuales</label>
+                <input type="number" id="otros_ingresos" value="0">
+
+                <label for="base_liquidacion">Base de liquidación</label>
+                <input type="number" id="base_liquidacion" disabled>
+
+                <label for="prestamos_pendientes">Préstamos pendientes</label>
+                <input type="number" id="prestamos_pendientes" value="0">
+
+                <label for="deducciones_pendientes">Deducciones pendientes</label>
+                <input type="number" id="deducciones_pendientes" value="0">
+
+                <label for="bonificaciones_pendientes">Bonificaciones pendientes</label>
+                <input type="number" id="bonificaciones_pendientes" value="0">
+            </div>
+
+            <div class="section">
+                <input type="checkbox" id="aceptar_terminos" required>
+                <label for="aceptar_terminos">He leído y acepto los Términos, Condiciones y Políticas</label>
+            </div>
+
+            <button type="submit">Calcular</button>
+        </form>
+    </div>
+</body>
+</html>
